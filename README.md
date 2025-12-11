@@ -49,6 +49,4 @@ I treat infrastructure as code. My personal setup includes a **Windows-based NAS
 
 ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Security](https://img.shields.io/badge/Security-Shields-green?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-### 📈 GitHub Stats
-![Kim's GitHub stats](https://github-readme-stats.vercel.app/api?username=kimzam30&show_icons=true&theme=radical&hide=stars)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kimzam30&layout=compact&theme=radical)
+
