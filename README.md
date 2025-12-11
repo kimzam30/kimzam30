@@ -29,7 +29,7 @@ I'm an IT student, computer shop owner, and security-focused developer. I combin
 **🎨 Web Technologies and Development**
 * **Structure & Style:** Advanced **HTML5** (Semantic Web) and **CSS3** (Flexbox/Grid, Responsive Design).
 * **Interactivity:** Modern **JavaScript (ES6+)** for dynamic DOM manipulation and real-time state management.
-* * **Frontend:** JavaScript (ES6+), HTML5, CSS3.
+* **Frontend:** JavaScript (ES6+), HTML5, CSS3.
 * **Backend:** Serverless architecture, Real-time data syncing.
 
 **🐍 Python & Scripting**
