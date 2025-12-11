@@ -49,6 +49,6 @@ I treat infrastructure as code. My personal setup includes a **Windows-based NAS
 
 ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Security](https://img.shields.io/badge/Security-Shields-green?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Tailscale](https://img.shields.io/badge/Project-OpenWRT--Tailscale--Enabler-blue?style=flat-square)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Tailscale](https://img.shields.io/badge/Project-OpenWRT--Tailscale--Enabler-blue?style=flat-square) ![GoogleCloud](https://img.shields.io/badge/Google%20Cloud-4285F4?&style=plastic&logo=Google%20Cloud&logoColor=white
 
 
