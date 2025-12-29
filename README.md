@@ -1,6 +1,6 @@
 # Hi there, I'm Hakim (kimzam) ! 👋
 
-I am an **IT Student**, **Computer Shop Owner**, and **Security-Focused Developer**.
+I am an **IT Student**, **Full-Stack Developer**, and **Security-Focused Developer**.
 
 I don't just write code; I build the environments it runs on. My work bridges the gap between high-performance hardware and resilient software, specializing in secure, low-latency architectures from the kernel up to the UI.
 
