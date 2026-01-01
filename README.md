@@ -89,6 +89,15 @@ I believe in **"Data Sovereignty"** and **"Infrastructure as Code."** I have mov
 
 ### 📈 GitHub Stats
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=kimzam30&theme=tokyonight)
+<img
+  src="https://github.com/<username>/<repository-name>/blob/<branch-name>/images/stat.svg"
+  alt="Alternative Text"
+/>
+Example:
+<img
+  src="https://github.com/avinal/avinal/blob/main/images/stat.svg"
+  alt="Avinal WakaTime Activity"
+/>
 
 
 ---
