@@ -88,9 +88,8 @@ I believe in **"Data Sovereignty"** and **"Infrastructure as Code."** I have mov
 ---
 
 ### 📈 GitHub Stats
-![Hakim's Stats](https://github-readme-stats.vercel.app/api?username=kimzam30&show_icons=true&theme=tokyonight)
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=kimzam30&theme=tokyonight)
-[![Trophy](https://github-profile-trophy.vercel.app/?username=kimzam30&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+
 
 ---
 
