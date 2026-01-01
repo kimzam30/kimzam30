@@ -91,6 +91,8 @@ I believe in **"Data Sovereignty"** and **"Infrastructure as Code."** I have mov
 
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=kimzam30&theme=tokyonight)
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 ---
 
 **💬 Ask me about:**
