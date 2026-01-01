@@ -90,7 +90,7 @@ I believe in **"Data Sovereignty"** and **"Infrastructure as Code."** I have mov
 ### 📈 GitHub Stats
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=kimzam30&theme=tokyonight)
 
-<img
+![Wakatime]<img
   src="https://github.com/kimzam30/RemoteDevSetupWithNAS/blob/main/images/stat.svg"
   alt="Alternative Text"
 
