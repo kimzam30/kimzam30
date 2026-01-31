@@ -1,7 +1,4 @@
 # Hi there, I'm Hakim (kimzam) ! 👋
-
-> **IT Major bridging Software & Infrastructure.** > Orchestrating containerized environments with Linux/Docker and building scalable apps in Python & JS.
-
 ---
 
 ### 📊 GitHub Analytics
