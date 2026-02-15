@@ -1,16 +1,6 @@
 # Hi there, I'm Hakim (kimzam) ! 👋
 ---
 
-### 📊 GitHub Analytics
-<div align="center">
-  <a href="https://github.com/kimzam30">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=kimzam30&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kimzam30&layout=compact&theme=tokyonight&langs_count=8"/>
-  </a>
-</div>
-
----
-
 ### 🛠️ Technical Arsenal
 <div align="center">
   <a href="https://skillicons.dev">
