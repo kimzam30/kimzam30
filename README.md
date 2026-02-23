@@ -42,8 +42,8 @@
 | :--- | :--- | :--- |
 | 🌑 **[Project Nera](https://github.com/kimzam30/Project-Nera)** | Zero-dependency, vanilla JS message prompting engine with a lightweight footprint. | `Vanilla JS` `CSS3` |
 | 🦋 **[Butterfly Word Search](https://github.com/kimzam30/butterfly-word-search)** | Secure real-time multiplayer game engine. | `JS` `Firebase` `HTML5` |
-| 🤖**[Nhako Bot](https://github.com/kimzam30/Nhako-Bot)** | A personalized AI assistant integrated directly into messenger apps. | `AI` `Python` |
-| 🧑🏻‍🏫**[Nhako Tools](https://tools.nhako.com)** | A suite of everyday web tools designed to streamline daily tasks. | `Productivity Tools` |
+| 🤖 **[Nhako Bot](https://github.com/kimzam30/Nhako-Bot)** | A personalized AI assistant integrated directly into messenger apps. | `AI` `Python` |
+| 🧑🏻‍🏫 **[Nhako Tools](https://tools.nhako.com)** | A suite of everyday web tools designed to streamline daily tasks. | `Productivity Tools` |
 
 
 #### 🚧 In Active Development
