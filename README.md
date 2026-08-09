@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Full-Stack Developer · Systems &amp; Infrastructure</b><br/>
-  Building product systems at <a href="https://omnisystems.my">Omni Systems Sdn. Bhd.</a> — Malaysia 🇲🇾
+  Building product systems at <a href="https://omnisystems.my">Omni Systems Sdn. Bhd.</a> Malaysia 🇲🇾
 </p>
 
 <p align="center">
