@@ -45,7 +45,7 @@ Product systems I design, build, and maintain. Source is private; links point to
 
 | Project | Description | Stack |
 |---|---|---|
-| **[my-homelab-setup](https://github.com/kimzam30/my-homelab-setup)** | Centralized, production-grade homelab: Homepage, FileBrowser, Pi-hole, and Uptime Kuma orchestrated with Docker Compose and secured over Tailscale. Serves as dashboard, NAS, DNS, and media host. | `Docker` `Nginx` `Tailscale` `Self-hosted` |
+| **[my-homelab-setup](https://github.com/kimzam30/my-homelab-setup)** | Eight-service homelab — Homepage, FileBrowser, Pi-hole, Jellyfin, Gitea, Speedtest Tracker, and Uptime Kuma behind Nginx, orchestrated with Docker Compose and reachable over Tailscale. | `Docker` `Nginx` `Tailscale` `Self-hosted` |
 | **[Remote-Dev-Setup](https://github.com/kimzam30/Remote-Dev-Setup)** | Portable, containerized VS Code Server environment for coding from any device — pre-built Python &amp; C++ toolchains, NAS mounts, Tailscale access. | `Docker` `Python` `C++` `SSH` |
 | **[my-linux-setup](https://github.com/kimzam30/my-linux-setup)** | Linux workstation config (Zorin OS on a Dell XPS 15 9500): remote-development tuning, TLP battery management, and low-latency game streaming via Sunshine + Tailscale. | `Bash` `Shell` `Linux` |
 
@@ -53,17 +53,12 @@ Product systems I design, build, and maintain. Source is private; links point to
 
 | Project | Description | Stack |
 |---|---|---|
+| **[Nhako Search](https://search.nhako.com)** | Two-player word search — solo puzzles, a daily challenge, a 360-level path, and realtime race and co-op multiplayer. Seeded deterministic puzzle generation so both players are guaranteed identical boards. | `Next.js` `TypeScript` `Supabase` |
 | **[Nhako-Bot](https://github.com/kimzam30/Nhako-Bot)** | Multimodal self-hosted Telegram AI assistant — Llama 3.2, pgvector long-term memory, and offline voice transcription with faster-whisper. | `Python` `Llama 3` `PostgreSQL` `RAG` |
-| **[butterfly-word-search](https://butterflywordsearch.web.app)** | Real-time multiplayer word search — an offline-capable PWA with a server-validated game engine. | `Vanilla JS` `Firebase` `PWA` |
+| **[butterfly-word-search](https://butterflywordsearch.web.app)** | Real-time multiplayer word search — an offline-capable PWA with a server-validated game engine. Since rebuilt as Nhako Search. | `Vanilla JS` `Firebase` `PWA` |
 | **[Nhako-Tools](https://tools.nhako.com)** | Hub of small, fast, single-purpose web tools for everyday tasks. | `JavaScript` `HTML` `CSS` |
 | **[Project-Nera](https://github.com/kimzam30/Project-Nera)** | Zero-dependency vanilla JS message engine — retro terminal letter template with typewriter effects, audio, and a cinematic image reveal. | `Vanilla JS` `CSS` `HTML` |
 | **[NhakoCapture](https://github.com/kimzam30/NhakoCapture)** | Lightweight in-browser screenshot tool. | `JavaScript` |
-
-### In Development
-
-| Project | Description | Stack |
-|---|---|---|
-| **[Nhako Search](https://nhako-search.vercel.app)** | V2 rebuild of Butterfly Word Search — rewritten in TypeScript with a new UI and an intelligent hint system. | `TypeScript` `Fullstack` |
 
 ---
 
