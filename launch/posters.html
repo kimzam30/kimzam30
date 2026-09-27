@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ecosystem posters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=block" rel="stylesheet">
+<style>
+  /*
+   * Launch posters for the profile README. One file, four layouts, picked by
+   * ?p=nhako|omni|homelab|banner. House rules: flat fills only (no gradients
+   * anywhere, including shadows, which are hard offsets), and no em dashes in
+   * any copy.
+   */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .poster { position: relative; overflow: hidden; display: none; }
+  .poster.on { display: block; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+  img { display: block; }
+
+  /* ---------- shared pieces ---------- */
+  .top { position: absolute; left: 64px; right: 64px; top: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 14px; font-size: 26px; font-weight: 700; letter-spacing: -.02em; }
+  .brand img { width: 46px; height: 46px; }
+  .count { font-size: 15px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+  h1 { position: absolute; left: 64px; right: 64px; top: 138px; font-size: 90px; line-height: .98; font-weight: 800; letter-spacing: -.05em; }
+  .sub { position: absolute; left: 64px; width: 900px; top: 336px; font-size: 27px; line-height: 1.36; letter-spacing: -.012em; }
+
+  .win { position: absolute; border-radius: 14px; overflow: hidden; }
+  .win .bar { height: 38px; display: flex; align-items: center; gap: 8px; padding: 0 14px; }
+  .win .bar i { width: 11px; height: 11px; border-radius: 50%; }
+  .win .bar .url { margin-left: 16px; flex: 1; max-width: 300px; height: 22px; border-radius: 6px; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+  .win img { width: 100%; }
+
+  .phone { position: absolute; border-radius: 44px; padding: 10px; }
+  .phone .screen { border-radius: 34px; overflow: hidden; height: 100%; position: relative; }
+  .phone .screen img { width: 100%; height: calc(100% - 46px); margin-top: 46px; object-fit: cover; object-position: top; }
+  .phone .island { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 86px; height: 25px; border-radius: 14px; background: #000; z-index: 2; }
+
+  .foot { position: absolute; left: 64px; right: 64px; bottom: 52px; display: flex; align-items: center; justify-content: space-between; }
+  .cta { display: inline-flex; align-items: center; gap: 12px; padding: 15px 28px; border-radius: 999px; font-size: 22px; font-weight: 700; letter-spacing: -.01em; }
+  .fine { font-size: 17px; text-align: right; line-height: 1.4; }
+
+  /* ================= NHAKO ================= */
+  #nhako { width: 1080px; height: 1350px; background: #fff3f7; color: #3b1236; }
+  #nhako .count, #nhako .sub, #nhako .fine { color: #7d4a73; }
+  #nhako h1 em { font-style: normal; color: #cf1780; }
+  #nhako .win { left: 64px; top: 488px; width: 720px; border: 3px solid #3b1236; box-shadow: 12px 12px 0 #3b1236; background: #fff; }
+  #nhako .win .bar { background: #ffe3ee; border-bottom: 3px solid #3b1236; }
+  #nhako .win .bar i { background: #3b1236; }
+  #nhako .win .bar .url { background: #fff; color: #3b1236; border: 2px solid #3b1236; }
+  #nhako .phone .screen { background: #fef2f7; }
+  #nhako .phone { left: 748px; top: 470px; width: 262px; height: 520px; background: #3b1236; box-shadow: 12px 12px 0 #cf1780; }
+  #nhako .shelf { position: absolute; left: 64px; right: 64px; top: 1030px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  #nhako .card { display: flex; flex-direction: column; align-items: flex-start; background: #fff; border: 3px solid #3b1236; border-radius: 16px; padding: 16px 14px 14px; box-shadow: 6px 6px 0 #3b1236; }
+  #nhako .card .ic { width: 40px; height: 40px; border-radius: 10px; }
+  #nhako .card svg.ic { padding: 8px; background: #ffe3ee; border: 2px solid #3b1236; fill: none; stroke: #3b1236; stroke-width: 2; stroke-linejoin: miter; }
+  #nhako .card b { display: block; margin-top: 12px; font-size: 18px; letter-spacing: -.02em; }
+  #nhako .card span { display: block; margin-top: 4px; font-size: 14px; line-height: 1.3; color: #7d4a73; }
+  #nhako .pill { font-style: normal; margin-top: auto; display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border: 2px solid #3b1236; }
+  #nhako .pill.live { background: #cf1780; border-color: #cf1780; color: #fff; }
+  #nhako .cta { background: #3b1236; color: #fff; }
+
+  /* ================= OMNI ================= */
+  #omni { width: 1080px; height: 1350px; background: #f3f0e8; color: #141414; }
+  #omni .count, #omni .sub, #omni .fine { color: #5d5a53; }
+  #omni h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: 88px; letter-spacing: -.025em; line-height: 1.02; }
+  #omni h1 em { color: #e0462b; }
+  #omni .sub { top: 336px; }
+  #omni .win { left: 64px; top: 478px; width: 700px; border: 2px solid #141414; box-shadow: 12px 12px 0 #141414; background: #fff; }
+  #omni .win .bar { background: #fff; border-bottom: 2px solid #141414; }
+  #omni .win .bar i { background: #141414; }
+  #omni .win .bar .url { background: #f3f0e8; color: #141414; }
+  #omni .phone .screen { background: #f6f3ec; }
+  #omni .phone { left: 752px; top: 452px; width: 262px; height: 512px; background: #141414; box-shadow: 12px 12px 0 #e0462b; }
+  #omni .grid { position: absolute; left: 64px; right: 64px; top: 1004px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid #141414; }
+  #omni .sys { padding: 18px 18px 0 0; }
+  #omni .sys + .sys { padding-left: 18px; border-left: 1px solid #c9c4b8; }
+  #omni .sys small { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: #e0462b; }
+  #omni .sys b { display: block; margin-top: 8px; font-size: 22px; letter-spacing: -.02em; }
+  #omni .sys span { display: block; margin-top: 6px; font-size: 14.5px; line-height: 1.35; color: #5d5a53; min-height: 58px; }
+  #omni .sys code { display: block; margin-top: 8px; font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 500; }
+  #omni .apps { position: absolute; left: 64px; right: 64px; top: 1180px; display: flex; align-items: center; gap: 10px; font-size: 15px; color: #5d5a53; }
+  #omni .apps b { color: #141414; margin-right: 6px; }
+  #omni .apps span { padding: 5px 12px; border: 1.5px solid #141414; border-radius: 999px; color: #141414; font-weight: 600; font-size: 14px; }
+  #omni .apps span.dev { border-style: dashed; color: #5d5a53; border-color: #5d5a53; }
+  #omni .cta { background: #141414; color: #f3f0e8; }
+
+  /* ================= HOMELAB ================= */
+  #homelab { width: 1080px; height: 1350px; background: #0f1216; color: #e9edf1; }
+  #homelab .count, #homelab .sub, #homelab .fine { color: #97a2ad; }
+  #homelab .rack { width: 46px; height: 46px; fill: none; stroke: #3fd07a; stroke-width: 1.8; }
+  #homelab h1 em { font-style: normal; color: #3fd07a; }
+  #homelab .diagram { position: absolute; left: 64px; top: 468px; width: 952px; height: 430px; }
+  #homelab .lane { position: absolute; top: 0; bottom: 0; width: 440px; }
+  #homelab .lane.pub { left: 0; }
+  #homelab .lane.pri { right: 0; }
+  #homelab .lane h3 { font-family: "JetBrains Mono", monospace; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; }
+  #homelab .pub h3 { color: #f2b33d; }
+  #homelab .pri h3 { color: #3fd07a; }
+  #homelab .node { position: absolute; left: 0; right: 0; height: 58px; border-radius: 12px; display: flex; align-items: center; padding: 0 18px; font-size: 19px; font-weight: 600; letter-spacing: -.01em; }
+  #homelab .node small { margin-left: auto; font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 500; color: #97a2ad; }
+  #homelab .pub .node { border: 2px solid #f2b33d; }
+  #homelab .pri .node { border: 2px solid #3fd07a; }
+  #homelab .node.solid.a { background: #f2b33d; color: #0f1216; }
+  #homelab .node.solid.g { background: #3fd07a; color: #0f1216; }
+  #homelab .node.solid small { color: #0f1216; }
+  #homelab .arrow { position: absolute; left: 50%; width: 2px; height: 34px; }
+  #homelab .arrow::after { content: ""; position: absolute; bottom: -1px; left: -6px; border: 7px solid transparent; border-bottom: 0; border-top-width: 9px; }
+  #homelab .pub .arrow { background: #f2b33d; }
+  #homelab .pub .arrow::after { border-top-color: #f2b33d; }
+  #homelab .pri .arrow { background: #3fd07a; }
+  #homelab .pri .arrow::after { border-top-color: #3fd07a; }
+  #homelab .svc { position: absolute; left: 0; right: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  #homelab .svc span { padding: 9px 14px; border-radius: 10px; background: #1b2128; font-size: 16px; font-weight: 500; }
+  #homelab .wall { position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; margin-left: -2px; background: #2c343d; }
+  #homelab .wall b { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-90deg); white-space: nowrap; background: #0f1216; padding: 0 14px; font-family: "JetBrains Mono", monospace; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: #97a2ad; }
+  #homelab .stats { position: absolute; left: 64px; right: 64px; top: 930px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2px solid #2c343d; }
+  #homelab .stat { padding-top: 20px; }
+  #homelab .stat b { display: block; font-size: 60px; font-weight: 800; letter-spacing: -.045em; line-height: 1; }
+  #homelab .stat span { display: block; margin-top: 8px; font-size: 16px; color: #97a2ad; }
+  #homelab .kin { position: absolute; left: 64px; right: 64px; top: 1082px; display: flex; gap: 10px; flex-wrap: wrap; font-size: 15px; }
+  #homelab .kin span { padding: 7px 13px; border: 1.5px solid #2c343d; border-radius: 999px; color: #c5ccd3; }
+  #homelab .kin span b { color: #e9edf1; }
+  #homelab .cta { background: #3fd07a; color: #0f1216; font-family: "JetBrains Mono", monospace; font-size: 19px; }
+
+  /* ================= BANNER ================= */
+  #banner { width: 1280px; height: 560px; background: #fafaf7; color: #141414; }
+  #banner .who { position: absolute; left: 64px; top: 70px; width: 560px; }
+  #banner .who .mono { font-size: 17px; color: #5d5a53; letter-spacing: .02em; }
+  #banner .who h2 { margin-top: 18px; font-size: 76px; line-height: .98; font-weight: 800; letter-spacing: -.05em; }
+  #banner .who p { margin-top: 26px; font-size: 23px; line-height: 1.4; color: #3d3b37; letter-spacing: -.01em; }
+  #banner .who p b { color: #141414; }
+  #banner .who .tags { margin-top: 30px; display: flex; gap: 8px; flex-wrap: wrap; }
+  #banner .who .tags span { padding: 6px 12px; border: 1.5px solid #141414; border-radius: 999px; font-size: 14px; font-weight: 600; }
+  #banner .tiles { position: absolute; right: 64px; top: 64px; bottom: 76px; width: 520px; display: grid; grid-template-rows: repeat(3, 1fr); gap: 16px; }
+  #banner .tile { border-radius: 18px; padding: 0 26px; display: flex; align-items: center; gap: 20px; border: 2.5px solid #141414; box-shadow: 8px 8px 0 #141414; }
+  #banner .tile .n { font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 700; letter-spacing: .1em; }
+  #banner .tile b { display: block; font-size: 27px; letter-spacing: -.025em; }
+  #banner .tile span { display: block; margin-top: 4px; font-size: 16px; }
+  #banner .t1 { background: #fff3f7; color: #3b1236; }
+  #banner .t1 .n { color: #cf1780; }
+  #banner .t2 { background: #f3f0e8; }
+  #banner .t2 .n { color: #e0462b; }
+  #banner .t2 b { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: 29px; }
+  #banner .t3 { background: #0f1216; color: #e9edf1; }
+  #banner .t3 .n { color: #3fd07a; }
+  #banner .t3 span, #banner .t2 span, #banner .t1 span { opacity: .78; }
+  #banner .strip { position: absolute; left: 0; right: 0; bottom: 0; height: 12px; display: grid; grid-template-columns: 1fr 1fr 1fr; }
+</style>
+</head>
+<body>
+
+<!-- ======================= 01 NHAKO ======================= -->
+<section class="poster" id="nhako">
+  <div class="top">
+    <div class="brand"><img src="shots/logo.svg" alt="">Nhako</div>
+    <div class="count">Ecosystem 01 / 03</div>
+  </div>
+  <h1>Things that run<br><em>on your own device.</em></h1>
+  <p class="sub">Five products from one small workshop in Malaysia. Browser tools that never upload your files, a word&#8209;search game for two, and a screenshot extension with no network calls.</p>
+
+  <div class="win">
+    <div class="bar"><i></i><i></i><i></i><div class="url">tools.nhako.com</div></div>
+    <img src="shots/tools-laptop.jpg" alt="">
+  </div>
+  <div class="phone"><div class="screen"><div class="island"></div><img src="shots/search-board.jpg" alt=""></div></div>
+
+  <div class="shelf">
+    <div class="card"><img class="ic" src="shots/tools-icon.png" alt=""><b>Nhako Tools</b><span>50 tools, nothing uploads</span><i class="pill live">Live</i></div>
+    <div class="card"><img class="ic" src="shots/search-icon.png" alt=""><b>NhakoSearch</b><span>Word search for two</span><i class="pill live">Live</i></div>
+    <div class="card"><img class="ic" src="shots/capture-icon.png" alt=""><b>NhakoCapture</b><span>Screenshots for Brave and Chrome</span><i class="pill">v2.0</i></div>
+    <div class="card"><svg class="ic" viewBox="0 0 24 24"><path d="M3 4h18v12H10l-5 4v-4H3z"/><path d="M7.4 9.2h1.8v1.8H7.4zM11.1 9.2h1.8v1.8h-1.8zM14.8 9.2h1.8v1.8h-1.8z"/></svg><b>Nhako Bot</b><span>A local LLM on Telegram</span><i class="pill">Self&#8209;host</i></div>
+    <div class="card"><svg class="ic" viewBox="0 0 24 24"><path d="M2 6h7v12H2z"/><path d="M15 6h7v12h-7z"/><path d="M9.5 12h5"/><path d="M12.4 9.6L14.8 12l-2.4 2.4"/></svg><b>Nhako Beam</b><span>Peer to peer file transfer</span><i class="pill">Planning</i></div>
+  </div>
+
+  <div class="foot">
+    <div class="cta">Everything at nhako.com</div>
+    <div class="fine">Free, open source where it can be.<br>Made by kimzam.</div>
+  </div>
+</section>
+
+<!-- ======================= 02 OMNI ======================= -->
+<section class="poster" id="omni">
+  <div class="top">
+    <div class="brand"><img src="shots/omnisystems-logo.png" alt="">Omni Systems</div>
+    <div class="count">Ecosystem 02 / 03</div>
+  </div>
+  <h1>Build <em>systems</em>,<br>not short&#8209;term fixes.</h1>
+  <p class="sub">One identity, one data spine, one set of workflows. Four production systems from a Malaysian product studio, each built on the same core instead of bolted to it.</p>
+
+  <div class="win">
+    <div class="bar"><i></i><i></i><i></i><div class="url">octomations.com</div></div>
+    <img src="shots/octomations.jpg" alt="">
+  </div>
+  <div class="phone"><div class="screen"><div class="island"></div><img src="shots/intrafluence-phone.jpg" alt=""></div></div>
+
+  <div class="grid">
+    <div class="sys"><small>Business</small><b>Octomations</b><span>Modular business OS with industry systems for clinics, retail and more.</span><code>octomations.com</code></div>
+    <div class="sys"><small>Influence</small><b>Intrafluence</b><span>Brands and creators find each other and agree on paid work.</span><code>intrafluence.com</code></div>
+    <div class="sys"><small>Digital life</small><b>Kentra</b><span>Identity, continuity and context across your digital activity.</span><code>kentra.app</code></div>
+    <div class="sys"><small>Awareness</small><b>TrueSelf</b><span>Self assessment, growth tracking and development plans.</span><code>mytrueself.app</code></div>
+  </div>
+  <div class="apps"><b>Omni App line</b><span>Tools</span><span class="dev">Money</span><span class="dev">Copy</span><span class="dev">Docs</span><span class="dev">Plan</span></div>
+
+  <div class="foot">
+    <div class="cta">omnisystems.my</div>
+    <div class="fine">Hakim Zamri, Co&#8209;founder and CTO.<br>Puchong, Selangor.</div>
+  </div>
+</section>
+
+<!-- ======================= 03 HOMELAB ======================= -->
+<section class="poster" id="homelab">
+  <div class="top">
+    <div class="brand"><svg class="rack" viewBox="0 0 24 24"><path d="M4 3h16v18H4z"/><path d="M4 9h16M4 15h16"/><path d="M7 6h3M7 12h3M7 18h3"/><path d="M15.5 5.2h1.6v1.6h-1.6zM15.5 11.2h1.6v1.6h-1.6zM15.5 17.2h1.6v1.6h-1.6z"/></svg>Homelab26</div>
+    <div class="count">Ecosystem 03 / 03</div>
+  </div>
+  <h1>One box.<br><em>Two front doors.</em></h1>
+  <p class="sub">19 containers across 9 Compose projects on one machine under the desk. The public path and the private path never touch, and every decision is written down.</p>
+
+  <div class="diagram">
+    <div class="lane pub">
+      <h3>Public</h3>
+      <div class="node" style="top:36px">The internet</div>
+      <div class="arrow" style="top:98px"></div>
+      <div class="node solid a" style="top:136px">Public reverse proxy</div>
+      <div class="arrow" style="top:198px"></div>
+      <div class="node" style="top:236px">Minecraft server <small>Fabric, 138 mods</small></div>
+      <div class="node" style="top:306px">Server website <small>Next.js</small></div>
+      <div class="svc" style="top:382px"><span>Own proxy</span><span>One open port</span><span>No private routes</span></div>
+    </div>
+    <div class="wall"><b>No route between</b></div>
+    <div class="lane pri">
+      <h3>Private</h3>
+      <div class="node" style="top:36px">Your devices</div>
+      <div class="arrow" style="top:98px"></div>
+      <div class="node solid g" style="top:136px">Tailscale tailnet</div>
+      <div class="arrow" style="top:198px"></div>
+      <div class="svc" style="top:238px"><span>Nextcloud</span><span>Vaultwarden</span><span>Portainer</span><span>Homepage</span><span>PairDrop</span></div>
+      <div class="svc" style="top:382px"><span>Separate networks</span><span>Separate bind addresses</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>19</b><span>containers</span></div>
+    <div class="stat"><b>9</b><span>Compose projects</span></div>
+    <div class="stat"><b>5</b><span>Docker networks</span></div>
+    <div class="stat"><b>4</b><span>backup layers</span></div>
+  </div>
+  <div class="kin">
+    <span><b>Remote Dev Setup</b> VS Code in a container</span>
+    <span><b>my-linux-setup</b> Zorin on an XPS 15</span>
+    <span><b>Nhako Bot</b> Llama 3.2 at home</span>
+    <span><b>my-homelab-setup</b> the first build</span>
+  </div>
+
+  <div class="foot">
+    <div class="cta">github.com/kimzam30/Homelab26</div>
+    <div class="fine">Nine documents cover<br>the whole machine.</div>
+  </div>
+</section>
+
+<!-- ======================= README BANNER ======================= -->
+<section class="poster" id="banner">
+  <div class="who">
+    <div class="mono">@kimzam30 &nbsp;/&nbsp; Malaysia</div>
+    <h2>Hakim Zamri</h2>
+    <p><b>Co&#8209;founder and CTO at Omni Systems.</b> Full&#8209;stack developer who builds products down to the servers they run on.</p>
+    <div class="tags"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span><span>Linux</span></div>
+  </div>
+  <div class="tiles">
+    <div class="tile t1"><div class="n">01</div><div><b>Nhako</b><span>Five products that run on your own device</span></div></div>
+    <div class="tile t2"><div class="n">02</div><div><b>Omni Systems</b><span>Four production systems on one core</span></div></div>
+    <div class="tile t3"><div class="n">03</div><div><b>Homelab26</b><span>19 containers, two front doors</span></div></div>
+  </div>
+  <div class="strip"><i style="background:#cf1780"></i><i style="background:#141414"></i><i style="background:#3fd07a"></i></div>
+</section>
+
+<script>
+  const id = new URLSearchParams(location.search).get('p') || 'nhako';
+  document.getElementById(id).classList.add('on');
+</script>
+</body>
+</html>
