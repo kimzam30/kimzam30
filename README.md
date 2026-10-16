@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/posters/banner.png" alt="Hakim Zamri, Co-founder and CTO at Omni Systems. Three ecosystems: Nhako, Omni Systems and Homelab26." width="100%" />
+  <img src="assets/posters/banner.png" alt="Hakim Zamri, Co-founder and backend developer at Omni Systems. Three ecosystems: Nhako, Omni Systems and Homelab26." width="100%" />
 </p>
 
 <p align="center">
@@ -13,17 +13,31 @@
 
 ## About
 
-Co-founder and CTO at [Omni Systems](https://www.omnisystems.my), where I lead backend architecture, data and infrastructure. IT undergraduate and full-stack developer working across the whole stack, from Next.js product surfaces down to the Docker hosts and Linux boxes they run on.
+Co-founder and backend developer at [Omni Systems](https://www.omnisystems.my), where I work on backend architecture, data and infrastructure. IT undergraduate and full-stack developer working across the whole stack, from Next.js product surfaces down to the Docker hosts and Linux boxes they run on.
 
 Outside the day job I run **Nhako**, a one-person workshop of products that run on your own device, and a documented homelab that doubles as staging and storage. I care about systems that stay maintainable a year later, not demos that look good for a week.
 
 | | |
 |---|---|
-| **Just shipped** | [Nhako Tools 1.0](https://tools.nhako.com): 50 browser tools with no upload step, in English and Bahasa Melayu. |
-| **Currently building** | [Octomations](https://www.octomations.com) and [Intrafluence](https://www.intrafluence.com) at Omni Systems, and [NhakoSearch](https://search.nhako.com) on the side. |
-| **Working in** | TypeScript, Next.js, PostgreSQL, Supabase, Cloudflare R2, Vercel. |
+| **Just shipped** | [Nhako Depot](https://github.com/kimzam30/Nhako-Depot): every app on a Linux computer in one window, updated and removed the right way. And the first alpha of [Nhako Beam](https://github.com/kimzam30/Nhako-beam/releases/tag/v0.1.0): file transfer straight between your own devices. |
+| **Currently building** | [Octomations](https://www.octomations.com) and [Intrafluence](https://www.intrafluence.com) at Omni Systems; Nhako Beam toward a Play Store release, and NhakoBazaar, a directory for Malaysian-made goods. |
+| **Working in** | TypeScript, Next.js, PostgreSQL, Supabase and Rust, on Vercel, Cloudflare R2 and Docker. |
 | **Also running** | A self-hosted homelab of 19 containers across 9 Docker Compose projects, with private services reachable only over Tailscale. |
 | **Studying** | Operating systems, OOP and data structures, and low-level C/C++ alongside the product work. |
+
+---
+
+## Latest Launches
+
+<p align="center">
+  <a href="assets/posters/depot.png"><img src="assets/posters/depot.png" alt="Nhako Depot poster: every Linux app, in one place. Released." width="48%" /></a>
+  <a href="assets/posters/beam.png"><img src="assets/posters/beam.png" alt="Nhako Beam poster: send anything, straight to them. Alpha 0.1.0." width="48%" /></a>
+</p>
+
+| | |
+|---|---|
+| **[Nhako Depot](https://github.com/kimzam30/Nhako-Depot)**<br/><sub>Released</sub> | A Linux app manager for people new to Linux. Debs, Snaps, Flatpaks and hand-installed apps in one window, each badged with where it came from. Updates and safe removal through PackageKit, hand installs go to the Trash. Scans about 2,500 packages in 50 ms from a 1 MB native binary.<br/>`Rust` `GTK 4` `libadwaita` `PackageKit` |
+| **[Nhako Beam](https://github.com/kimzam30/Nhako-beam)**<br/><sub>[Alpha 0.1.0](https://github.com/kimzam30/Nhako-beam/releases/tag/v0.1.0)</sub> | An open alternative to Blip. Files go straight from one of your devices to another on Windows, Linux and Android: no cloud, no size limit, no account. Pair with a four-word code, resume from the last confirmed byte, and run your own relay in Docker if you want.<br/>`Rust` `iroh` `Tauri` `Kotlin` |
 
 ---
 
@@ -45,9 +59,11 @@ Things that run on your own device. Every product lives at **[nhako.com](https:/
 |---|---|
 | **[Nhako Tools](https://tools.nhako.com)**<br/><sub>Live</sub> | 50 PDF, image, media, calculator and developer tools that run entirely in the browser. Nothing uploads, so nothing waits: no queue, no size cap, no account. Installs as an app and works offline.<br/>`Astro 5` `Preact` `TypeScript` `WASM` |
 | **[NhakoSearch](https://search.nhako.com)**<br/><sub>Live</sub> | A cozy, hand-drawn word-search game for two: a daily puzzle, a 360-level path, 12 themes, and realtime race or co-op. Seeded generation guarantees both players an identical board.<br/>`Next.js 16` `Supabase` `Realtime` |
-| **[NhakoCapture](https://github.com/kimzam30/NhakoCapture)**<br/><sub>v2.0, load unpacked</sub> | Opera's one-keystroke screenshot rebuilt for Brave and Chrome. Freeze the page, frame a region, annotate, copy. Whole page to PNG or PDF, real redaction, no network calls.<br/>`JavaScript` `Manifest V3` |
+| **[NhakoCapture](https://chromewebstore.google.com/detail/nhakocapture/jappjdkoignhbjjlemegflaleoeebpln)**<br/><sub>Live, Chrome Web Store</sub> | Opera's one-keystroke screenshot rebuilt for Chrome, Brave and Edge. Freeze the page, frame a region, annotate, copy. Whole page to PNG or PDF, real redaction, no network calls. [Source](https://github.com/kimzam30/NhakoCapture).<br/>`JavaScript` `Manifest V3` |
 | **[Nhako Bot](https://github.com/kimzam30/Nhako-Bot)**<br/><sub>Self-host</sub> | Telegram assistant that runs on your own hardware: Llama 3.2 through Ollama, pgvector long-term memory and offline voice transcription with faster-whisper.<br/>`Python` `Ollama` `pgvector` |
-| **[Nhako Beam](https://github.com/kimzam30/Nhako-beam)**<br/><sub>Planning</sub> | Direct file transfer with no cloud, no size cap and no account. Peer to peer first, a self-hosted Docker relay only when the network leaves no other way.<br/>`Rust` `QUIC` `Tauri` |
+| **[Nhako Depot](https://github.com/kimzam30/Nhako-Depot)**<br/><sub>Released</sub> | Every app on your Linux computer in one place: Deb, Snap, Flatpak and hand installs, with updates, safe removal and broken-launcher clean-up. Built from source in about five minutes.<br/>`Rust` `GTK 4` `libadwaita` |
+| **[Nhako Beam](https://github.com/kimzam30/Nhako-beam)**<br/><sub>Alpha 0.1.0</sub> | Direct file transfer between your own devices on Windows, Linux and Android. Encrypted end to end, peer to peer first, through a relay only when it has to, and the relay is yours to self-host.<br/>`Rust` `iroh` `Tauri` `Kotlin` |
+| **NhakoBazaar**<br/><sub>In development</sub> | A free directory for Malaysian-made goods: brands, creators and home sellers show their products and buyers contact them directly. No payments. In Bahasa Melayu and English.<br/>`Next.js 16` `Supabase` `PostGIS` |
 
 ### 02 &nbsp;Omni Systems
 
@@ -125,7 +141,7 @@ flowchart TD
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,astro,tailwind,html,css&theme=dark" alt="Frontend" />
   <br/><br/>
-  <img src="https://skillicons.dev/icons?i=python,java,cpp,c,postgres,supabase,firebase&theme=dark" alt="Backend and languages" />
+  <img src="https://skillicons.dev/icons?i=rust,python,kotlin,java,cpp,c,postgres,supabase,firebase&theme=dark" alt="Backend and languages" />
   <br/><br/>
   <img src="https://skillicons.dev/icons?i=linux,docker,nginx,bash,git,cloudflare,vercel,vscode&theme=dark" alt="Infrastructure and tooling" />
 </div>

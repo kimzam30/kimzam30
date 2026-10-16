@@ -3,6 +3,8 @@
  *
  *   PLAYWRIGHT=/path/to/node_modules/@playwright/test/index.mjs node launch/render.mjs
  *
+ * OUT=<dir> renders somewhere else (a draft folder) instead of assets/posters/.
+ *
  * This repo has no package.json, so Playwright is borrowed from any checkout
  * that has it (PLAYWRIGHT), falling back to a global `playwright`. Before each
  * screenshot the page is checked against the house rules: no gradient in any
@@ -15,12 +17,14 @@ import { fileURLToPath } from 'node:url';
 
 const { chromium } = await import(process.env.PLAYWRIGHT ?? 'playwright');
 const HERE = fileURLToPath(new URL('./', import.meta.url));
-const OUT = fileURLToPath(new URL('../assets/posters/', import.meta.url));
+const OUT = process.env.OUT ?? fileURLToPath(new URL('../assets/posters/', import.meta.url));
 
 const POSTERS = {
   nhako: { w: 1080, h: 1350 },
   omni: { w: 1080, h: 1350 },
   homelab: { w: 1080, h: 1350 },
+  beam: { w: 1080, h: 1350 },
+  depot: { w: 1080, h: 1350 },
   banner: { w: 1280, h: 560 },
 };
 const TYPES = { '.html': 'text/html', '.jpg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml' };
@@ -69,7 +73,7 @@ for (const [id, { w, h }] of Object.entries(POSTERS)) {
     console.error(`${id}: ${problems.join('; ')}`);
   } else {
     await page.screenshot({ path: join(OUT, `${id}.png`) });
-    console.log(`${id}: ${w * 2}x${h * 2} -> assets/posters/${id}.png`);
+    console.log(`${id}: ${w * 2}x${h * 2} -> ${join(OUT, `${id}.png`)}`);
   }
   await page.close();
 }

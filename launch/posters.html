@@ -7,8 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=block" rel="stylesheet">
 <style>
   /*
-   * Launch posters for the profile README. One file, four layouts, picked by
-   * ?p=nhako|omni|homelab|banner. House rules: flat fills only (no gradients
+   * Launch posters for the profile README. One file, six layouts, picked by
+   * ?p=nhako|omni|homelab|beam|depot|banner. Beam and Depot use their own
+   * project palettes. House rules: flat fills only (no gradients
    * anywhere, including shadows, which are hard offsets), and no em dashes in
    * any copy.
    */
@@ -52,13 +53,13 @@
   #nhako .win .bar .url { background: #fff; color: #3b1236; border: 2px solid #3b1236; }
   #nhako .phone .screen { background: #fef2f7; }
   #nhako .phone { left: 748px; top: 470px; width: 262px; height: 520px; background: #3b1236; box-shadow: 12px 12px 0 #cf1780; }
-  #nhako .shelf { position: absolute; left: 64px; right: 64px; top: 1030px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
-  #nhako .card { display: flex; flex-direction: column; align-items: flex-start; background: #fff; border: 3px solid #3b1236; border-radius: 16px; padding: 16px 14px 14px; box-shadow: 6px 6px 0 #3b1236; }
-  #nhako .card .ic { width: 40px; height: 40px; border-radius: 10px; }
-  #nhako .card svg.ic { padding: 8px; background: #ffe3ee; border: 2px solid #3b1236; fill: none; stroke: #3b1236; stroke-width: 2; stroke-linejoin: miter; }
-  #nhako .card b { display: block; margin-top: 12px; font-size: 18px; letter-spacing: -.02em; }
-  #nhako .card span { display: block; margin-top: 4px; font-size: 14px; line-height: 1.3; color: #7d4a73; }
-  #nhako .pill { font-style: normal; margin-top: auto; display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border: 2px solid #3b1236; }
+  #nhako .shelf { position: absolute; left: 64px; right: 64px; top: 1026px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 18px; }
+  #nhako .card { position: relative; display: flex; align-items: center; gap: 14px; height: 88px; background: #fff; border: 3px solid #3b1236; border-radius: 16px; padding: 0 14px; box-shadow: 6px 6px 0 #3b1236; }
+  #nhako .card .ic { flex: none; width: 44px; height: 44px; border-radius: 11px; }
+  #nhako .card svg.ic { padding: 9px; background: #ffe3ee; border: 2px solid #3b1236; fill: none; stroke: #3b1236; stroke-width: 2; stroke-linejoin: miter; }
+  #nhako .card b { display: block; font-size: 19px; letter-spacing: -.02em; }
+  #nhako .card span { display: block; margin-top: 3px; font-size: 14px; line-height: 1.25; color: #7d4a73; }
+  #nhako .pill { position: absolute; top: -13px; right: 12px; font-style: normal; display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border: 2px solid #3b1236; background: #fff; }
   #nhako .pill.live { background: #cf1780; border-color: #cf1780; color: #fff; }
   #nhako .cta { background: #3b1236; color: #fff; }
 
@@ -125,6 +126,73 @@
   #homelab .kin span b { color: #e9edf1; }
   #homelab .cta { background: #3fd07a; color: #0f1216; font-family: "JetBrains Mono", monospace; font-size: 19px; }
 
+  /* ================= BEAM (Nhako Beam brand: blue, dark blue, yellow, ink) ================= */
+  #beam { width: 1080px; height: 1350px; background: #2f8fff; color: #fff; }
+  #beam .brand { font-size: 30px; }
+  #beam .brand .mark { width: 58px; height: 58px; border-radius: 15px; background: #0b1b33; display: grid; place-items: center; }
+  #beam .brand .mark img { width: 34px; height: 34px; }
+  #beam .brand em { font-style: normal; color: #0b1b33; }
+  #beam .tag { padding: 10px 20px; border-radius: 999px; background: #ffd23f; color: #0b1b33; font-size: 18px; font-weight: 800; letter-spacing: -.01em; box-shadow: 5px 5px 0 #1a6fe0; }
+  #beam h1 { font-size: 96px; letter-spacing: -.055em; }
+  #beam h1 em { font-style: normal; color: #0b1b33; }
+  #beam .sub { top: 352px; width: 560px; font-size: 26px; }
+  #beam .bolt { position: absolute; left: 872px; top: 132px; width: 132px; transform: rotate(8deg); filter: drop-shadow(7px 7px 0 #1a6fe0); }
+  #beam .phone { left: 676px; top: 330px; width: 340px; height: 756px; background: #0b1b33; box-shadow: 14px 14px 0 #1a6fe0; border-radius: 52px; padding: 11px; }
+  #beam .phone .screen { border-radius: 42px; background: #f3f4f7; }
+  #beam .phone .screen img { width: 100%; height: 100%; margin: 0; object-fit: cover; object-position: top; }
+  #beam .feats { position: absolute; left: 64px; top: 520px; width: 560px; display: grid; gap: 18px; }
+  #beam .feat { display: flex; gap: 18px; align-items: flex-start; background: #fff; color: #0b1b33; border: 3px solid #0b1b33; border-radius: 18px; padding: 20px 22px; box-shadow: 8px 8px 0 #1a6fe0; }
+  #beam .feat .k { flex: none; width: 48px; height: 48px; border-radius: 12px; background: #ffd23f; border: 2.5px solid #0b1b33; display: grid; place-items: center; }
+  #beam .feat .k svg { width: 26px; height: 26px; fill: none; stroke: #0b1b33; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  #beam .feat b { display: block; font-size: 25px; letter-spacing: -.025em; }
+  #beam .feat span { display: block; margin-top: 4px; font-size: 17px; line-height: 1.35; color: #3a4a63; }
+  #beam .plat { position: absolute; left: 64px; top: 1132px; display: flex; gap: 12px; align-items: center; }
+  #beam .plat span { padding: 8px 16px; border: 2.5px solid #fff; border-radius: 999px; font-size: 17px; font-weight: 700; }
+  #beam .plat span.ink { border-color: #0b1b33; background: #0b1b33; }
+  #beam .cta { background: #0b1b33; color: #fff; }
+  #beam .fine { color: #e6f0ff; }
+
+  /* ================= DEPOT (Depot's own look: libadwaita light, violet and teal, real badge colours) ================= */
+  #depot { width: 1080px; height: 1350px; background: #f6f5f4; color: #1c1b22; }
+  #depot .brand { font-size: 30px; }
+  #depot .brand img { width: 54px; height: 54px; }
+  #depot .brand small { font-size: 18px; font-weight: 600; color: #6b6875; letter-spacing: 0; }
+  #depot .tag { padding: 10px 20px; border-radius: 999px; background: #14b8a6; color: #fff; font-size: 18px; font-weight: 800; letter-spacing: -.01em; box-shadow: 5px 5px 0 #1c1b22; }
+  #depot h1 { font-size: 92px; }
+  #depot h1 em { font-style: normal; color: #6d5dfc; }
+  #depot .sub { color: #4d4a57; }
+  #depot .app { position: absolute; left: 64px; top: 482px; width: 952px; height: 470px; background: #fff; border: 2.5px solid #1c1b22; border-radius: 16px; overflow: hidden; box-shadow: 14px 14px 0 #6d5dfc; display: grid; grid-template-columns: 236px 1fr; grid-template-rows: 54px 1fr; }
+  #depot .hb { grid-column: 1 / 3; display: flex; align-items: center; padding: 0 18px; border-bottom: 1px solid #dedde3; background: #fff; font-size: 16px; font-weight: 700; }
+  #depot .hb .dots { margin-left: auto; display: flex; gap: 10px; }
+  #depot .hb .dots i { width: 22px; height: 22px; border-radius: 50%; background: #ebeaef; }
+  #depot .hb .search { margin-left: 254px; width: 300px; height: 32px; border-radius: 8px; background: #ebeaef; font-size: 14px; font-weight: 500; color: #6b6875; display: flex; align-items: center; padding: 0 12px; }
+  #depot .side { background: #ebeaef; padding: 14px 10px; border-right: 1px solid #dedde3; }
+  #depot .side div { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 8px; font-size: 15px; font-weight: 600; color: #3a3843; }
+  #depot .side div.on { background: #d9d6f9; color: #1c1b22; }
+  #depot .side small { font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 99px; background: #6d5dfc; color: #fff; }
+  #depot .side .sec { margin: 14px 12px 4px; padding: 0; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: #8a8794; }
+  #depot .list { padding: 14px 18px; display: grid; gap: 10px; align-content: start; }
+  #depot .row { display: flex; align-items: center; gap: 14px; padding: 11px 14px; border: 1px solid #e3e2e8; border-radius: 12px; }
+  #depot .row .ic { width: 38px; height: 38px; border-radius: 10px; flex: none; display: grid; place-items: center; font-size: 17px; font-weight: 800; color: #fff; }
+  #depot .row b { display: block; font-size: 16px; }
+  #depot .row em { display: block; font-style: normal; font-size: 13px; color: #6b6875; margin-top: 2px; }
+  #depot .badge { margin-left: auto; border-radius: 99px; padding: 3px 11px; font-size: 13px; font-weight: 700; }
+  #depot .deb { background: #f9dbe6; color: #d70a53; }
+  #depot .snap { background: #fbe2d8; color: #e95420; }
+  #depot .flatpak { background: #dfe9f7; color: #4a90d9; }
+  #depot .manual { background: #d8f2e6; color: #1f9e63; }
+  #depot .btn { margin-left: 10px; padding: 5px 12px; border-radius: 8px; background: #ebeaef; font-size: 13px; font-weight: 700; color: #3a3843; }
+  #depot .btn.go { background: #6d5dfc; color: #fff; }
+  #depot .stats { position: absolute; left: 64px; right: 64px; top: 1000px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 2.5px solid #1c1b22; }
+  #depot .stat { padding-top: 18px; padding-right: 12px; }
+  #depot .stat b { display: block; font-size: 52px; font-weight: 800; letter-spacing: -.045em; line-height: 1; }
+  #depot .stat b small { font-size: 26px; letter-spacing: -.02em; }
+  #depot .stat span { display: block; margin-top: 8px; font-size: 16px; line-height: 1.3; color: #4d4a57; }
+  #depot .distros { position: absolute; left: 64px; right: 64px; top: 1150px; display: flex; gap: 10px; flex-wrap: wrap; }
+  #depot .distros span { padding: 6px 13px; border: 1.5px solid #1c1b22; border-radius: 999px; font-size: 14px; font-weight: 600; }
+  #depot .cta { background: #1c1b22; color: #fff; }
+  #depot .fine { color: #4d4a57; }
+
   /* ================= BANNER ================= */
   #banner { width: 1280px; height: 560px; background: #fafaf7; color: #141414; }
   #banner .who { position: absolute; left: 64px; top: 70px; width: 560px; }
@@ -159,7 +227,7 @@
     <div class="count">Ecosystem 01 / 03</div>
   </div>
   <h1>Things that run<br><em>on your own device.</em></h1>
-  <p class="sub">Five products from one small workshop in Malaysia. Browser tools that never upload your files, a word&#8209;search game for two, and a screenshot extension with no network calls.</p>
+  <p class="sub">Six products from one small workshop in Malaysia, with a seventh on the way. Browser tools that never upload, a word&#8209;search game for two, file transfer straight between your devices, and a Linux app manager.</p>
 
   <div class="win">
     <div class="bar"><i></i><i></i><i></i><div class="url">tools.nhako.com</div></div>
@@ -168,11 +236,12 @@
   <div class="phone"><div class="screen"><div class="island"></div><img src="shots/search-board.jpg" alt=""></div></div>
 
   <div class="shelf">
-    <div class="card"><img class="ic" src="shots/tools-icon.png" alt=""><b>Nhako Tools</b><span>50 tools, nothing uploads</span><i class="pill live">Live</i></div>
-    <div class="card"><img class="ic" src="shots/search-icon.png" alt=""><b>NhakoSearch</b><span>Word search for two</span><i class="pill live">Live</i></div>
-    <div class="card"><img class="ic" src="shots/capture-icon.png" alt=""><b>NhakoCapture</b><span>Screenshots for Brave and Chrome</span><i class="pill">v2.0</i></div>
-    <div class="card"><svg class="ic" viewBox="0 0 24 24"><path d="M3 4h18v12H10l-5 4v-4H3z"/><path d="M7.4 9.2h1.8v1.8H7.4zM11.1 9.2h1.8v1.8h-1.8zM14.8 9.2h1.8v1.8h-1.8z"/></svg><b>Nhako Bot</b><span>A local LLM on Telegram</span><i class="pill">Self&#8209;host</i></div>
-    <div class="card"><svg class="ic" viewBox="0 0 24 24"><path d="M2 6h7v12H2z"/><path d="M15 6h7v12h-7z"/><path d="M9.5 12h5"/><path d="M12.4 9.6L14.8 12l-2.4 2.4"/></svg><b>Nhako Beam</b><span>Peer to peer file transfer</span><i class="pill">Planning</i></div>
+    <div class="card"><img class="ic" src="shots/tools-icon.png" alt=""><div><b>Nhako Tools</b><span>50 tools, nothing uploads</span></div><i class="pill live">Live</i></div>
+    <div class="card"><img class="ic" src="shots/search-icon.png" alt=""><div><b>NhakoSearch</b><span>Word search for two</span></div><i class="pill live">Live</i></div>
+    <div class="card"><img class="ic" src="shots/capture-icon.png" alt=""><div><b>NhakoCapture</b><span>On the Chrome Web Store</span></div><i class="pill live">Live</i></div>
+    <div class="card"><img class="ic" src="shots/depot-icon.svg" alt=""><div><b>Nhako Depot</b><span>Every Linux app, one window</span></div><i class="pill live">Released</i></div>
+    <div class="card"><img class="ic" src="shots/beam-icon.svg" alt=""><div><b>Nhako Beam</b><span>Device to device, no cloud</span></div><i class="pill">Alpha</i></div>
+    <div class="card"><svg class="ic" viewBox="0 0 24 24"><path d="M3 4h18v12H10l-5 4v-4H3z"/><path d="M7.4 9.2h1.8v1.8H7.4zM11.1 9.2h1.8v1.8h-1.8zM14.8 9.2h1.8v1.8h-1.8z"/></svg><div><b>Nhako Bot</b><span>A local LLM on Telegram</span></div><i class="pill">Self&#8209;host</i></div>
   </div>
 
   <div class="foot">
@@ -206,7 +275,7 @@
 
   <div class="foot">
     <div class="cta">omnisystems.my</div>
-    <div class="fine">Hakim Zamri, Co&#8209;founder and CTO.<br>Puchong, Selangor.</div>
+    <div class="fine">Hakim Zamri, Co&#8209;founder and backend developer.<br>Puchong, Selangor.</div>
   </div>
 </section>
 
@@ -261,16 +330,83 @@
   </div>
 </section>
 
+<!-- ======================= NHAKO BEAM ======================= -->
+<section class="poster" id="beam">
+  <div class="top">
+    <div class="brand"><div class="mark"><img src="shots/beam-bolt.svg" alt=""></div>Nhako <em>Beam</em></div>
+    <div class="tag">Alpha 0.1.0</div>
+  </div>
+  <h1>Send anything.<br><em>Straight to them.</em></h1>
+  <p class="sub">Open source file transfer that goes from one of your devices to another. Nothing is uploaded or kept in between.</p>
+  <img class="bolt" src="shots/beam-bolt.svg" alt="">
+
+  <div class="feats">
+    <div class="feat"><div class="k"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.6 4.2 4.2 0 0 0 7 18z"/><path d="M4 4l16 16"/></svg></div><div><b>No cloud</b><span>Device to device, encrypted end to end. On the same Wi&#8209;Fi they find each other.</span></div></div>
+    <div class="feat"><div class="k"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/></svg></div><div><b>No size limit</b><span>Only your disk decides. A dropped link resumes from the last confirmed byte.</span></div></div>
+    <div class="feat"><div class="k"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2"/></svg></div><div><b>No account</b><span>Pair once with a four&#8209;word code or a QR code. Run your own relay in Docker if you like.</span></div></div>
+  </div>
+
+  <div class="phone"><div class="screen"><img src="shots/beam-phone.png" alt=""></div></div>
+
+  <div class="plat"><span class="ink">Windows</span><span class="ink">Linux</span><span class="ink">Android</span><span>MIT or Apache 2.0</span></div>
+
+  <div class="foot">
+    <div class="cta">github.com/kimzam30/Nhako&#8209;beam</div>
+    <div class="fine">Built on iroh, Tauri and<br>Jetpack Compose. By Nhako.</div>
+  </div>
+</section>
+
+<!-- ======================= NHAKO DEPOT ======================= -->
+<section class="poster" id="depot">
+  <div class="top">
+    <div class="brand"><img src="shots/depot-icon.svg" alt="">Depot <small>by Nhako</small></div>
+    <div class="tag">Released</div>
+  </div>
+  <h1>Every Linux app,<br><em>in one place.</em></h1>
+  <p class="sub">Debs, Snaps, Flatpaks and apps installed by hand, each with a badge that says where it came from. Update it or remove it the right way, without knowing the command.</p>
+
+  <div class="app">
+    <div class="hb">Depot<div class="search">Search apps</div><div class="dots"><i></i><i></i><i></i></div></div>
+    <div class="side">
+      <div class="on">Installed</div>
+      <div>Updates <small>New</small></div>
+      <div>Broken launchers</div>
+      <div class="sec">More</div>
+      <div>Advanced</div>
+    </div>
+    <div class="list">
+      <div class="row"><div class="ic" style="background:#e95420">F</div><div><b>Firefox</b><em>Web browser</em></div><span class="badge snap">Snap</span><span class="btn">Remove</span></div>
+      <div class="row"><div class="ic" style="background:#4a90d9">O</div><div><b>Obsidian</b><em>Notes</em></div><span class="badge flatpak">Flatpak</span><span class="btn go">Update</span></div>
+      <div class="row"><div class="ic" style="background:#d70a53">V</div><div><b>VLC media player</b><em>Video and audio</em></div><span class="badge deb">Deb</span><span class="btn">Remove</span></div>
+      <div class="row"><div class="ic" style="background:#2ec27e">D</div><div><b>Discord</b><em>Installed by hand, goes to the Trash</em></div><span class="badge manual">Manual</span><span class="btn">Remove</span></div>
+      <div class="row"><div class="ic" style="background:#8a8794">S</div><div><b>System updates</b><em>Libraries, drivers and runtimes</em></div><span class="badge" style="background:#ebeaef;color:#3a3843">Grouped</span><span class="btn go">Update all</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>50<small> ms</small></b><span>to scan about 2,500 packages</span></div>
+    <div class="stat"><b>1<small> MB</small></b><span>one native program, Rust and GTK 4</span></div>
+    <div class="stat"><b>4</b><span>install types in one window</span></div>
+    <div class="stat"><b>Undo</b><span>hand installs go to the Trash, not gone</span></div>
+  </div>
+  <div class="distros"><span>Ubuntu 24.04</span><span>Zorin OS 18</span><span>Linux Mint 22</span><span>Fedora 40</span><span>and newer</span></div>
+
+  <div class="foot">
+    <div class="cta">github.com/kimzam30/Nhako&#8209;Depot</div>
+    <div class="fine">Free and open source,<br>GPL 3.0 or later.</div>
+  </div>
+</section>
+
 <!-- ======================= README BANNER ======================= -->
 <section class="poster" id="banner">
   <div class="who">
     <div class="mono">@kimzam30 &nbsp;/&nbsp; Malaysia</div>
     <h2>Hakim Zamri</h2>
-    <p><b>Co&#8209;founder and CTO at Omni Systems.</b> Full&#8209;stack developer who builds products down to the servers they run on.</p>
-    <div class="tags"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span><span>Linux</span></div>
+    <p><b>Co&#8209;founder and backend developer at Omni Systems.</b> Full&#8209;stack developer who builds products down to the servers they run on.</p>
+    <div class="tags"><span>TypeScript</span><span>Next.js</span><span>PostgreSQL</span><span>Rust</span><span>Docker</span><span>Linux</span></div>
   </div>
   <div class="tiles">
-    <div class="tile t1"><div class="n">01</div><div><b>Nhako</b><span>Five products that run on your own device</span></div></div>
+    <div class="tile t1"><div class="n">01</div><div><b>Nhako</b><span>Six products that run on your own device</span></div></div>
     <div class="tile t2"><div class="n">02</div><div><b>Omni Systems</b><span>Four production systems on one core</span></div></div>
     <div class="tile t3"><div class="n">03</div><div><b>Homelab26</b><span>19 containers, two front doors</span></div></div>
   </div>

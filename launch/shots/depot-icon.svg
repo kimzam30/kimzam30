@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Flat redraw of Nhako-Depot data/icons/.../dev.kimzam.Depot.svg for the posters:
+       same box and arrow, the violet-to-teal gradient replaced by flat violet with a teal offset. -->
+  <rect x="10" y="10" width="114" height="114" rx="28" fill="#14b8a6"/>
+  <rect x="4" y="4" width="114" height="114" rx="28" fill="#6d5dfc"/>
+  <g stroke-linejoin="round">
+    <path d="M29 46 L61 64 L61 100 L29 82 Z" fill="#ffffff" fill-opacity=".72"/>
+    <path d="M93 46 L61 64 L61 100 L93 82 Z" fill="#ffffff" fill-opacity=".48"/>
+    <path d="M61 28 L93 46 L61 64 L29 46 Z" fill="#ffffff"/>
+  </g>
+  <path d="M61 9 L61 20 M55 15 L61 21 L67 15" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
